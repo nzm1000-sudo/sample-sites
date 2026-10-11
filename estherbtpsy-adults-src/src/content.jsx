@@ -3,7 +3,8 @@ export const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('ש
 export const PHONE_HREF = 'tel:+972527993383';
 export const PHONE_TEXT = '052-7993383';
 export const EMAIL = 'contact@estherbtpsy.com';
-export const INSTAGRAM = 'https://www.instagram.com/invites/contact/?igsh=mime0jwdxm5l';
+export const INSTAGRAM = 'https://www.instagram.com/esthert330/';
+export const LICENSE = '161300';
 
 export const NAV = [
   ['#topics', 'עם מה מגיעים'],

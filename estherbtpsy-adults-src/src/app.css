@@ -312,6 +312,7 @@ main { overflow-x: clip; }
 .prose p { color: var(--ink-soft); max-width: 36em; }
 .methods { display: flex; flex-wrap: wrap; gap: .6rem; list-style: none; margin: 2rem 0 0; padding: 0; }
 .methods li { padding: .45rem 1.1rem; border-radius: 999px; border: 1px solid rgba(29, 36, 32, .25); font-size: .95rem; font-weight: 600; }
+.license { margin: 1.25rem 0 0; font-size: .92rem; color: var(--muted); }
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; }
   .about-visual { width: min(380px, 86%); margin-inline: auto; }

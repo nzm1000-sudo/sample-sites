@@ -15,7 +15,7 @@ import ContactForm from './ContactForm.jsx';
 import LogoMark from './LogoMark.jsx';
 import { RemoteIllustration, ServiceIcon } from './Icons.jsx';
 import {
-  EMAIL, FAQ, INSTAGRAM, METHODS, NAV, PHONE_HREF, PHONE_TEXT, ROTATING, SERVICES, STEPS, TOPICS, WA_LINK
+  EMAIL, FAQ, INSTAGRAM, LICENSE, METHODS, NAV, PHONE_HREF, PHONE_TEXT, ROTATING, SERVICES, STEPS, TOPICS, WA_LINK
 } from './content.jsx';
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, useGSAP);
@@ -540,6 +540,7 @@ export default function App() {
                   <li key={m} {...(latin ? { lang: 'en', dir: 'ltr' } : {})}>{m}</li>
                 ))}
               </ul>
+              <p className="license reveal">פסיכולוגית חינוכית מומחית · מס' רישיון {LICENSE}</p>
             </div>
           </div>
         </section>
@@ -662,7 +663,7 @@ export default function App() {
               <li><a href="./privacy.html">מדיניות פרטיות</a></li>
             </ul>
           </nav>
-          <p className="copyright">© {new Date().getFullYear()} אסתר ברבי טרבלסי. כל הזכויות שמורות.</p>
+          <p className="copyright">© {new Date().getFullYear()} אסתר ברבי טרבלסי · פסיכולוגית חינוכית מומחית, מס' רישיון {LICENSE}. כל הזכויות שמורות.</p>
         </div>
       </footer>
 
