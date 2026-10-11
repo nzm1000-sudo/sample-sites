@@ -291,8 +291,32 @@ main { overflow-x: clip; }
 
 /* Marquee */
 .marquee {
-  overflow: hidden; background: var(--ink-deep); color: var(--gold-soft);
-  padding: 1.2rem 0; transform: rotate(-1.2deg) scale(1.03); margin: 1rem 0 0;
+  position: relative; overflow: hidden; background: var(--ink-deep); color: var(--gold-soft);
+  padding: 1.55rem 0; margin: 0;
+}
+.marquee-viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.marquee-frame {
+  position: absolute; inset-inline: clamp(.75rem, 3vw, 2.5rem); height: 5px; pointer-events: none;
+  display: flex; align-items: center; justify-content: center;
+}
+.marquee-frame.top { top: .55rem; }
+.marquee-frame.bottom { bottom: .55rem; }
+.marquee-frame::before, .marquee-frame::after {
+  content: ""; position: absolute; inset-inline: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(234, 217, 176, .55) 18%, var(--gold) 50%, rgba(234, 217, 176, .55) 82%, transparent);
+  background-size: 200% 100%;
+}
+.marquee-frame::before { top: 0; }
+.marquee-frame::after { bottom: 0; opacity: .45; }
+.has-motion .marquee-frame::before { animation: shimmer 9s linear infinite; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+.marquee-diamond {
+  position: relative; z-index: 1; width: 9px; height: 9px; transform: rotate(45deg);
+  background: var(--ink-deep); border: 1px solid var(--gold); box-shadow: 0 0 0 4px var(--ink-deep);
 }
 .marquee-track { display: flex; width: max-content; }
 .marquee-group { display: flex; list-style: none; margin: 0; padding: 0; }
@@ -300,8 +324,7 @@ main { overflow-x: clip; }
   font-family: var(--font-display); font-size: clamp(1.25rem, 2.3vw, 1.9rem); white-space: nowrap;
   padding-inline: 1.6rem; display: flex; align-items: center; gap: 3.2rem;
 }
-.marquee-group li::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
-.no-motion .marquee { transform: none; }
+.marquee-group li::after { content: ""; width: 6px; height: 6px; transform: rotate(45deg); background: var(--gold); }
 .no-motion .marquee-track { width: auto; justify-content: center; }
 .no-motion .marquee-group + .marquee-group { display: none; }
 .no-motion .marquee-group { flex-wrap: wrap; justify-content: center; }

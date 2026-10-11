@@ -264,7 +264,15 @@ export default function App() {
       });
     });
 
-    // Marquee, nudged by scroll velocity
+    // Marquee frame draws open from the centre, then text drifts (faster with scroll velocity)
+    gsap.fromTo('.marquee-frame', { scaleX: 0 }, {
+      scaleX: 1, ease: 'none',
+      scrollTrigger: { trigger: '.marquee', start: 'top bottom', end: 'top 55%', scrub: true }
+    });
+    gsap.from('.marquee-diamond', {
+      rotate: -135, scale: 0, duration: 1.2, ease: 'back.out(2)',
+      scrollTrigger: { trigger: '.marquee', start: 'top 85%', once: true }
+    });
     const marquee = gsap.to('.marquee-track', { xPercent: 50, duration: 42, ease: 'none', repeat: -1 });
     ScrollTrigger.create({
       trigger: '.marquee', start: 'top bottom', end: 'bottom top',
@@ -478,13 +486,17 @@ export default function App() {
 
         {/* MARQUEE */}
         <div className="marquee" aria-hidden="true">
-          <div className="marquee-track">
-            {[0, 1].map((copy) => (
-              <ul className="marquee-group" key={copy}>
-                {TOPICS.map((t) => <li key={t}>{t}</li>)}
-              </ul>
-            ))}
+          <span className="marquee-frame top"><span className="marquee-diamond" /></span>
+          <div className="marquee-viewport">
+            <div className="marquee-track">
+              {[0, 1].map((copy) => (
+                <ul className="marquee-group" key={copy}>
+                  {TOPICS.map((t) => <li key={t}>{t}</li>)}
+                </ul>
+              ))}
+            </div>
           </div>
+          <span className="marquee-frame bottom"><span className="marquee-diamond" /></span>
         </div>
         <p className="visually-hidden">תחומי התמודדות: {TOPICS.join(', ')}.</p>
 
