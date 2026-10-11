@@ -171,7 +171,7 @@ main { overflow-x: clip; }
 .hero-line { display: block; }
 .hero-line + .hero-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .25em; }
 .rotator {
-  display: inline-flex; overflow: hidden; padding: .02em .28em .1em; margin-top: .05em;
+  display: inline-flex; overflow: hidden; padding: .3em .28em .12em; margin-top: .05em; line-height: 1.1;
   color: var(--paper); background: var(--clay); border-radius: .2em; font-weight: 400;
 }
 .rotator .text-rotate-element { will-change: transform; }
