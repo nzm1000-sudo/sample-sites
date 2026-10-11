@@ -412,8 +412,8 @@ export default function App() {
 
             <div className="hero-visual">
               <div className="hero-media">
-                <img src={ASSET('clinic-tel-aviv.jpg')} width="1024" height="924" fetchPriority="high"
-                  alt="חדר הטיפולים בתל אביב: ספה בהירה, כורסה ומדפי ספרים" />
+                <img src={ASSET('session.jpg')} width="1400" height="931" fetchPriority="high"
+                  alt="פגישה טיפולית: מטפלת רושמת במחברת מול מטופלת שיושבת על ספה" />
               </div>
               <div className="breath" aria-hidden="true">
                 <div className="breath-core" />
