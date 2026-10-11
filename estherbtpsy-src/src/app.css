@@ -305,15 +305,10 @@ main { overflow-x: clip; }
 }
 .marquee-frame.top { top: .55rem; }
 .marquee-frame.bottom { bottom: .55rem; }
-.marquee-frame::before, .marquee-frame::after {
-  content: ""; position: absolute; inset-inline: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(234, 217, 176, .55) 18%, var(--gold) 50%, rgba(234, 217, 176, .55) 82%, transparent);
-  background-size: 200% 100%;
+.marquee-frame::before {
+  content: ""; position: absolute; inset-inline: 0; top: 50%; height: 1px; translate: 0 -50%;
+  background: linear-gradient(90deg, transparent, rgba(198, 163, 98, .75) 6%, rgba(198, 163, 98, .75) 94%, transparent);
 }
-.marquee-frame::before { top: 0; }
-.marquee-frame::after { bottom: 0; opacity: .45; }
-.has-motion .marquee-frame::before { animation: shimmer 9s linear infinite; }
-@keyframes shimmer { to { background-position: -200% 0; } }
 .marquee-diamond {
   position: relative; z-index: 1; width: 9px; height: 9px; transform: rotate(45deg);
   background: var(--ink-deep); border: 1px solid var(--gold); box-shadow: 0 0 0 4px var(--ink-deep);
