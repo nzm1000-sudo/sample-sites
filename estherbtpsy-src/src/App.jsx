@@ -101,6 +101,9 @@ function HeroTitle({ motion, delay }) {
         {line('מרחב בטוח')}
         {line('להתבוננות,')}
         {line('חיבור וצמיחה', 'accent')}
+        <svg className="accent-swash" viewBox="0 0 300 16" preserveAspectRatio="none" focusable="false">
+          <path className="draw" d="M298 9C230 2 170 14 110 8S30 5 2 11" />
+        </svg>
       </span>
     </h1>
   );
@@ -237,6 +240,7 @@ export default function App() {
         { clipPath: 'inset(0% 0% 0% 0% round 999px 999px 32px 32px)', duration: 1.6, ease: 'expo.inOut' }, h - 0.1)
       .from('.portrait-frame img', { scale: 1.35, duration: 2.2, ease: 'expo.out' }, h + 0.3)
       .from('.hero-arch .draw', { drawSVG: 0, duration: 2, ease: 'power2.inOut' }, h + 0.4)
+      .from('.accent-swash .draw', { drawSVG: 0, duration: 1.4, ease: 'power3.inOut' }, h + 1.1)
       .from('.deco-orb', { scale: 0, opacity: 0, duration: 1.3, ease: 'back.out(1.6)' }, h + 0.9)
       .from('.hero .lead', { y: 30, opacity: 0, duration: 1.1 }, h + 0.7)
       .from('.hero-actions > *', { y: 30, opacity: 0, duration: 1, stagger: 0.1 }, h + 0.85)

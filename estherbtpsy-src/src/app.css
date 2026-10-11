@@ -230,7 +230,9 @@ main { overflow-x: clip; }
 .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
 .hero-title { font-size: clamp(3rem, 7vw, 6.3rem); line-height: 1; letter-spacing: -.025em; margin-bottom: 1.8rem; font-weight: 500; }
 .hero-line { display: block !important; overflow: visible !important; padding-bottom: .07em; }
-.hero-line.accent { color: var(--brand); font-style: italic; font-weight: 400; }
+.hero-line.accent { color: var(--brand); font-weight: 400; }
+.accent-swash { display: block; width: 5.4em; height: .32em; margin-top: -.06em; overflow: visible; }
+.accent-swash path { fill: none; stroke: var(--gold); stroke-width: 2; stroke-linecap: round; vector-effect: non-scaling-stroke; }
 .split-word { will-change: transform, opacity, filter; }
 .lead { font-size: clamp(1.1rem, 1.6vw, 1.3rem); font-weight: 300; color: var(--muted); max-width: 32em; line-height: 1.75; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin: 2.3rem 0 2rem; }
@@ -295,7 +297,7 @@ main { overflow-x: clip; }
 .marquee-track { display: flex; width: max-content; }
 .marquee-group { display: flex; list-style: none; margin: 0; padding: 0; }
 .marquee-group li {
-  font-family: var(--font-display); font-size: clamp(1.25rem, 2.3vw, 1.9rem); white-space: nowrap; font-style: italic;
+  font-family: var(--font-display); font-size: clamp(1.25rem, 2.3vw, 1.9rem); white-space: nowrap;
   padding-inline: 1.6rem; display: flex; align-items: center; gap: 3.2rem;
 }
 .marquee-group li::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
@@ -312,7 +314,7 @@ main { overflow-x: clip; }
 .section-head.center .eyebrow::after { content: ""; width: 36px; height: 1px; background: currentColor; }
 .section-sub { color: var(--muted); font-size: 1.15rem; font-weight: 300; }
 .prose p { max-width: 62ch; font-size: 1.12rem; font-weight: 300; color: #2a3542; }
-.signature { font-family: var(--font-display); font-size: 1.6rem !important; color: var(--ink) !important; margin-top: 2rem; line-height: 1.4; font-style: italic; font-weight: 400 !important; }
+.signature { font-family: var(--font-display); font-size: 1.6rem !important; color: var(--ink) !important; margin-top: 2rem; line-height: 1.4; font-weight: 400 !important; }
 
 .about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
 .about-grid .section-head { position: sticky; top: calc(var(--header-h) + 2rem); }
@@ -406,7 +408,7 @@ main { overflow-x: clip; }
 }
 @media (max-width: 760px) { .when-grid { grid-template-columns: 1fr; } .when-card { padding: 2rem 1.6rem; } }
 .pull-quote { margin: 4.5rem auto 0; max-width: 760px; text-align: center; }
-.pull-quote p { font-family: var(--font-display); font-style: italic; font-size: clamp(1.6rem, 3.2vw, 2.4rem); color: var(--ink); line-height: 1.35; margin: 0; }
+.pull-quote p { font-family: var(--font-display); font-size: clamp(1.6rem, 3.2vw, 2.4rem); color: var(--ink); line-height: 1.35; margin: 0; }
 .pull-quote p::before { content: "״"; display: block; font-size: 4rem; line-height: .7; color: var(--gold); margin-bottom: .4rem; font-style: normal; }
 
 /* Locations */
@@ -505,7 +507,7 @@ main { overflow-x: clip; }
 .footer-inner { display: grid; gap: 1.8rem; justify-items: center; text-align: center; }
 .footer-mark { width: 64px; color: var(--gold-soft); }
 .footer-cta { font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3.4rem); color: var(--white); margin: 0; line-height: 1.2; }
-.footer-cta a { color: var(--gold-soft); font-style: italic; }
+.footer-cta a { color: var(--gold-soft); }
 .footer-brand { display: grid; gap: .1rem; }
 .site-footer .brand-name { color: var(--white); }
 .site-footer .brand-role { color: #b7c6d4; }
