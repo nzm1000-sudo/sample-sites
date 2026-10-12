@@ -166,8 +166,8 @@ main { overflow-x: clip; }
 
 /* Hero */
 .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding: calc(var(--header-h) + 2rem) 0 2rem; }
-.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 6rem); align-items: center; }
-.hero-title { font-size: clamp(3.2rem, 8vw, 7.4rem); font-weight: 300; line-height: .98; letter-spacing: -.035em; margin-bottom: 2rem; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.hero-title { font-size: clamp(2.8rem, min(5.6vw, 9.5vh), 5.8rem); font-weight: 300; line-height: .98; letter-spacing: -.035em; margin-bottom: 1.5rem; }
 .hero-line { display: block; }
 .hero-line + .hero-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .25em; }
 .rotator {
