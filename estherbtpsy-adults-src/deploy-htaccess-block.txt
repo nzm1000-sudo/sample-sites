@@ -1,6 +1,7 @@
 # BEGIN estherbtpsy static site
 <IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteCond %{QUERY_STRING} !(^|&)(elementor-preview|preview|preview_id|page_id|p)= [NC]
 RewriteRule ^$ /index.html [L]
 RewriteCond %{THE_REQUEST} \s/%D7%94%D7%A6%D7%94%D7%A8%D7%AA-%D7%A0%D7%92%D7%99%D7%A9%D7%95%D7%AA/?[\s?] [NC]
 RewriteRule ^ /accessibility.html [R=301,L]
